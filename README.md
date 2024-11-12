@@ -1,3 +1,4 @@
+[![R-CMD-check](https://github.com/MirAbdulRehman-DS-DA/Shiny-App/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MirAbdulRehman-DS-DA/Shiny-App/actions/workflows/R-CMD-check.yaml)
 # WeatherSweden
 
 WeatherSweden is an R package that provides a simple interface to fetch current weather data for various cities in Sweden using the Open Meteo API.
