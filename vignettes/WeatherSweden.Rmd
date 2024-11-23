@@ -14,6 +14,135 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+# Introduction
+
+The `WeatherSweden` package provides a simple interface for fetching and displaying real-time weather data for cities in Sweden. This package leverages the Open-Meteo API to provide temperature, wind speed, and other current weather details.
+
+The package also includes a Shiny web application that allows users to select a city from a dropdown list and view the latest weather data. This vignette demonstrates the functionality of the package and guides you through its usage.
+
+------------------------------------------------------------------------
+
+# Installation and Setup
+
+To use `WeatherSweden`, install the package and load it into your R session:
+
+```{r}
+# Install WeatherSweden (assuming it's already uploaded to CRAN or GitHub)
+# devtools::install_github("your-repo/WeatherSweden")
+
 library(WeatherSweden)
 ```
+
+Ensure you have an active internet connection, as the package fetches real-time data from an external API.
+
+------------------------------------------------------------------------
+
+# Available Cities
+
+The `WeatherSweden` package supports weather queries for the following cities:
+
+-   Stockholm
+
+-   Gothenburg
+
+-   Malmö
+
+-   Uppsala
+
+-   Västerås
+
+-   Örebro
+
+-   Linköping
+
+-   Helsingborg
+
+-   Jönköping
+
+-   Norrköping
+
+-   Lund
+
+-   Umeå
+
+-   Gävle
+
+-   Borås
+
+-   Södertälje
+
+-   Eskilstuna
+
+-   Karlstad
+
+-   Täby
+
+-   Sundsvall
+
+-   Luleå
+
+You can view the complete list in the documentation by accessing the `city_coordinates` object.
+
+-------------------------------------------------------------------------------------
+
+# Using the `get_weather` Function
+
+The `get_weather` function is the core utility of the package. It retrieves weather data for a given Swedish city.
+
+## Example
+
+```{r}
+# Fetch weather for Stockholm
+result <- get_weather("Stockholm")
+print(result)
+```
+
+The function works only for supported Swedish cities. You can view the list of supported cities in the package documentation.
+
+------------------------------------------------------------------------
+
+# Error Handling
+
+The `get_weather` function includes robust error handling to ensure correct usage. Below are scenarios where the function will raise an error:
+
+-   **Invalid City Name**: If a city is not in the supported list, the function raises an error.
+
+    ```{r}
+
+    ```
+
+-   **Empty Input**: Passing an empty string as the city name also raises an error.
+
+    ```{r}
+
+    ```
+
+-------------------------------------------------------------------------------------
+
+# Behind the Scenes
+
+The `get_weather` function retrieves weather data using the Open-Meteo API. It uses pre-defined latitude and longitude coordinates for each supported city.
+
+### API Query Example
+
+For the city of Stockholm:
+
+<https://api.open-meteo.com/v1/forecast?latitude=59.3293&longitude=18.0686&current_weather=true>
+
+### Function Workflow
+
+1.  **Validate Input**: Ensure the provided city is supported.
+
+2.  **Fetch Weather Data**: Query the Open-Meteo API using the city’s latitude and longitude.
+
+3.  **Parse API Response**: Extract weather details from the API’s JSON response.
+
+4.  **Return Results**: Provide the user with current weather information.
+
+------------------------------------------------------------------------
+
+# Summary
+
+The `WeatherSweden` package simplifies weather data retrieval for Swedish cities. Its main function, `get_weather`, is user-friendly, robust, and provides accurate real-time weather data.
+
+This package is ideal for developers, researchers, or anyone looking to integrate Swedish weather data into their applications. For additional details, please refer to the package documentation or access the source code.

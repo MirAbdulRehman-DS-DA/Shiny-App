@@ -1,4 +1,5 @@
 library(shiny)
+library(WeatherSweden)
 
 # Define the list of Swedish cities
 city_list <- c(
