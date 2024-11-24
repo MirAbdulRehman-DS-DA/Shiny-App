@@ -40,6 +40,12 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
+      - name: Setup Homebrew (macOS only)
+        if: runner.os == 'macOS'
+        run: |
+          brew update || true
+          brew install qpdf || true
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck

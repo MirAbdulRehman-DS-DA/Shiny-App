@@ -5,6 +5,9 @@
 #' @export
 #' @examples
 #' get_weather("Stockholm")
+#' @examples
+#' mock_response <- list(current_weather = list(temperature = 20, windspeed = 5))
+#' print(mock_response)
 #' @name get_weather
 #'
 library(httr)
