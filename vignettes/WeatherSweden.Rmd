@@ -83,7 +83,7 @@ The `WeatherSweden` package supports weather queries for the following cities:
 
 You can view the complete list in the documentation by accessing the `city_coordinates` object.
 
--------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 # Using the `get_weather` Function
 
@@ -96,26 +96,6 @@ The `get_weather` function is the core utility of the package. It retrieves weat
 result <- get_weather("Stockholm")
 print(result)
 ```
-
-The function works only for supported Swedish cities. You can view the list of supported cities in the package documentation.
-
-------------------------------------------------------------------------
-
-# Error Handling
-
-The `get_weather` function includes robust error handling to ensure correct usage. Below are scenarios where the function will raise an error:
-
--   **Invalid City Name**: If a city is not in the supported list, the function raises an error.
-
-    ```{r}
-
-    ```
-
--   **Empty Input**: Passing an empty string as the city name also raises an error.
-
-    ```{r}
-
-    ```
 
 -------------------------------------------------------------------------------------
 
