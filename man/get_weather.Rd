@@ -20,7 +20,6 @@ Fetch Weather for a City in Sweden
 Get Weather for a Swedish City
 }
 \examples{
-get_weather("Stockholm")
 mock_response <- list(current_weather = list(temperature = 20, windspeed = 5))
 print(mock_response)
 }
