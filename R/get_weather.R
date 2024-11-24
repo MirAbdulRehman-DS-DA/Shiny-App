@@ -2,6 +2,9 @@
 #'
 #' @param city_name The name of the Swedish city (e.g., "Stockholm", "Gothenburg").
 #' @return A list containing the current weather data (temperature, windspeed, etc.) for the specified city.
+#' @export
+#' @examples
+#' get_weather("Stockholm")
 #' @examples
 #' mock_response <- list(current_weather = list(temperature = 20, windspeed = 5))
 #' print(mock_response)
