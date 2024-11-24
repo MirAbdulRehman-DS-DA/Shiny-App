@@ -1,10 +1,10 @@
 Package: WeatherSweden
 Type: Package
-Title: ShinyApp
+Title: Weather Data Retrieval for Swedish Cities
 Version: 0.1.0
 Author: Mir Abdul Rehman [aut], Thor Wahlestedt [aut]
 Maintainer: Mir Abdul Rehman <abdmi452@student.liu.se>, Thor Wahlestedt <thowa194@student.liu.se>
-Description: My Shiny App
+Description: Provides real-time weather data for Swedish cities using the Open-Meteo API. This package allows users to retrieve weather metrics such as temperature and windspeed for various cities in Sweden. It includes a Shiny App for visualization.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
